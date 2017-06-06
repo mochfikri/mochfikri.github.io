@@ -1,1 +1,193 @@
-Halo
+<!DOCTYPE html>
+<html lang="en" id="home">
+<head>
+  <meta charset="UTF-8">
+  <title>SeoGreen</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sweetalert.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <div class="navigasi">
+    <div class="nav">
+        <img src="img/flat/nav_burger.png" id="nav_icon" alt="">
+      <div id="menu_text">Menu</div>
+        <div class="nav_2">
+          <a href="#home" class="page_scroll">
+            <h1>Moch Fikri</h1>
+          </a>
+        </div>
+        <div class="nav_2">
+          <div class="nav_menu" id="menu">
+            <ul>
+              <li>
+                <a href="#home" class="page_scroll" id="home_mini">Home</a>
+              </li>
+              <li>
+                <a href="#about" class="page_scroll">About</a>
+              </li>
+              <li>
+                <a href="#portfolio" class="page_scroll">Portfolio</a>
+              </li>
+              <li>
+                <a href="#client" class="page_scroll">Client</a>
+              </li>
+              <li>
+                <a href="#contact" class="page_scroll">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <!-- end -->
+
+
+  <!-- jumbotron -->
+  <div class="jumbotron text-center">
+    <img src="img/profile.png" alt="Browser Anda Tidak Mendukung">
+    <h1>Moch Fikri</h1>
+    <p>Web Developer | Blogger</p>
+  </div>
+  <!-- end -->
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container">
+        <h2>About</h2>
+        <hr>
+        <div class="col_2">
+          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia minima dolore fugit impedit totam. Quae obcaecati ipsam cum qui ad facilis quaerat. Eveniet omnis sapiente itaque officiis aut assumenda maiores, repellendus maxime nisi minima iure excepturi cupiditate tenetur nesciunt autem quisquam velit. Eligendi a, labore ducimus neque repudiandae quis vel repellat aut laborum. Earum illo error numquam asperiores dolorem, nesciunt, libero aspernatur ad modi porro aut ipsa, quisquam fugiat. Quaerat.</span>
+        </div>
+        <div class="col_2">
+          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas vitae blanditiis quibusdam soluta illum sit ullam tenetur enim ab, a libero, nam nobis hic vero corrupti. At culpa illum repellendus corporis. Suscipit in iusto nobis cumque minima. Totam a necessitatibus recusandae error hic, officiis mollitia, cupiditate nemo. Velit, amet doloremque dignissimos sunt facere voluptates modi animi optio. Mollitia fuga numquam officiis minima, rem vero, sit in at est quis quia labore voluptates molestias excepturi atque!</span>
+        </div>
+        <div class="clear"></div>
+    </div>
+  </section>
+  <!-- end -->
+
+  <!-- portfolio -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <hr>
+      <div class="col_3_folio">
+        <a href="#">
+          <div class="list_img">
+            <img src="img/thumb/1.png" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="col_3_folio col_3_folio_center">
+        <a href="#">
+          <div class="list_img">
+            <img src="img/thumb/2.png" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="col_3_folio">
+        <a href="#">
+          <div class="list_img">
+            <img src="img/thumb/3.png" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="col_3_folio">
+        <a href="#">
+          <div class="list_img">
+            <img src="img/thumb/4.png" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="col_3_folio col_3_folio_center">
+        <a href="#">
+          <div class="list_img">
+            <img src="img/thumb/5.png" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="col_3_folio">
+        <a href="#">
+          <div class="list_img">
+            <img src="img/thumb/6.png" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <!-- end -->
+
+  <!-- Client -->
+  <section class="client" id="client">
+    <div class="container">
+      <div class="col_3">
+        <div class="menu_client">
+          <a href="#">
+            <img src="img/flat/client.png" alt="">
+          </a>
+        </div>
+        <p class="jml">0</p>
+        <p class="judul">Client</p>
+      </div>
+      <div class="col_3 col_3_center">
+        <div class="menu_client">
+          <a href="#">
+            <img src="img/flat/project.png" alt="">
+          </a>
+        </div>
+        <p class="jml">7</p>
+        <p class="judul">Project</p>
+      </div>
+      <div class="col_3">
+        <div class="menu_client">
+          <a href="#">
+            <img src="img/flat/reviews.png" alt="">
+          </a>
+        </div>
+        <p class="jml">28</p>
+        <p class="judul">Reviews</p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <!-- end -->
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <hr>
+      <div class="col_2">
+        <form action="" novalidate onsubmit="return validasi(this)">
+          <input type="text" name="nama" placeholder="Username">
+          <input type="email" name="email" placeholder="Email">
+          <textarea name="pesan" placeholder="Massage" rows="8" cols="40"></textarea>
+          <input type="submit" name="submit" value="Send">
+        </form>
+      </div>
+      <div class="col_2">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d253840.478949799!2d106.829518!3d-6.2297465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1496219656589" width="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <!-- end -->
+
+  <!-- Footer -->
+  <div id="footer">
+    <p>&copy; MochFikri 2017</p>
+  </div>
+  <!-- end -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/sweetalert.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
