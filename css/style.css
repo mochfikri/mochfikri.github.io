@@ -37,6 +37,7 @@ section{
 }
 .nav {
   padding: 25px 0;
+  -webkit-transition: .8s;
   transition: .8s;
 }
 .nav_bc {
@@ -66,11 +67,14 @@ section{
 .nav_2 a h1,
 .nav_menu ul li a {
   opacity: .6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  -webkit-transition: .3s;
   transition: .3s;
 }
 .nav_2 a:hover h1,
 .nav_menu ul li a:hover {
   opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 /*toggle menu*/
 #menu_text {
@@ -148,12 +152,17 @@ section{
 /*paralax*/
 .portfolio .col_3_folio {
   opacity: 0;
-  transform: translate(0,-40px);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -webkit-transform: translate(0,-40px);
+          transform: translate(0,-40px);
+  -webkit-transition: .5s;
   transition: .5s;
 }
 .portfolio .open {
   opacity: 1;
-  transform: translate(0,0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -webkit-transform: translate(0,0);
+          transform: translate(0,0);
 }
 /*end*/
 .col_3_folio_center{
@@ -169,6 +178,7 @@ section{
   border: 5px solid white;
   border-radius: 3px;
   box-shadow: 0 0 0 1px rgba(103, 103, 103,.1);
+  -webkit-transition: .3s;
   transition: .3s;
 }
 .col_3_folio a:hover img {
@@ -179,6 +189,7 @@ section{
 /*--Client--*/
 
 .client {
+  background: -webkit-linear-gradient(left,rgba(0,191,193,.9),rgba(0,192,169,.9));
   background: linear-gradient(to right,rgba(0,191,193,.9),rgba(0,192,169,.9));
 }
 .client .container {
@@ -198,6 +209,7 @@ section{
   border-radius: 50%;
   width: 130px;
   height: 130px;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 .menu_client {
@@ -247,6 +259,7 @@ input[type="submit"]{
   width: 100%;
   color: white;
   background-color:rgb(0,191,193);
+  -webkit-transition: .3s;
   transition: .3s;
 }
 input[type="submit"]:hover{
@@ -319,6 +332,7 @@ input[type="submit"]:hover{
     padding: 15px 0;
     font-size: 1em;
     opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     border-bottom: 1px solid white;
   }
   .col_3_folio,.col_2 {
@@ -346,12 +360,15 @@ input[type="submit"]:hover{
   .nav_menu{
     height: 0;
     overflow: hidden;
-    transform: translate(0,-300px);
+    -webkit-transform: translate(0,-300px);
+            transform: translate(0,-300px);
+    -webkit-transition: .8s;
     transition: .8s;
   }
   .menu_open {
     height: 100% !important;
-    transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+            transform: translate(0,0);
   }
 
 }
