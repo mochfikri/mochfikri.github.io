@@ -1,17 +1,12 @@
-// ToggleMenu
 $(document).ready(function(){
-	$('#nav_icon').click(function(){
+
+// ToggleMenu
+	$('#nav_icon,#menu').click(function(){
 		$('.nav_menu').toggleClass("menu_open");
 	});
-	$('#menu').click(function(){
-		$('.nav_menu').toggleClass("menu_open");
-	});
-});
 // end
 
-
-// fixed background scrolling body
-
+// page scroll
 $('.page_scroll').on('click',function(e){
 
   var tujuan = $(this).attr('href');
@@ -23,11 +18,9 @@ $('.page_scroll').on('click',function(e){
   }, 1000, 'easeInOutExpo');
 
   e.preventDefault();
-
 });
 
 // end
-
 
 
 // parallax scroll
@@ -37,11 +30,22 @@ $(window).scroll(function() {
   //Navigasi
     if (wScroll >= 250) {
       $('.nav').addClass('nav_bc');
+			//about
+			$('.p_kiri').addClass('p_muncul');
+			$('.p_kanan').addClass('p_muncul');
+			//end
     }else{
       $('.nav').removeClass('nav_bc');
     };
 	//end
 
+	if (wScroll > $('.skillbar').offset().top - 300) {
+    $('.skill-percent , .skill-bar').each(function(){
+      $(this).find('.percent , .slide-bar').animate({
+        width:$(this).attr('data-percent')
+      },5000,'easeInOutExpo');
+    });
+  };
 
   // jumbotron
 
@@ -55,6 +59,7 @@ $(window).scroll(function() {
     'transform' : 'translate(0px, '+ wScroll/1.2 +'%)'
   });
 
+
   // portfolio
 
   if (wScroll > $('.portfolio').offset().top - 350) {
@@ -64,9 +69,18 @@ $(window).scroll(function() {
       },300 * (i+1));
     });
   };
+	//Default href on portfolio and client
+	$('.lightbox,.clientdef').on('click',function(e){
+		e.preventDefault();
+	});
+	//end
 
-});
+});//end windows scroll
 // end
+
+
+}); // akhir document ready
+
 
 // validasi
 
@@ -93,3 +107,4 @@ function validasi(form){
 };
 
 // end
+
