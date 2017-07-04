@@ -33,7 +33,7 @@ section{
 .navigasi {
   position: fixed;
   width: 100%;
-  z-index: 9999;
+  z-index: 2;
 }
 .nav {
   padding: 25px 0;
@@ -127,7 +127,8 @@ section{
 
 /*--About--*/
 .about {
-  padding: 30px 0 50px 0;
+  padding: 30px 0;
+  overflow: hidden;
 }
 .col_2{
   float: left;
@@ -135,15 +136,80 @@ section{
   margin: 0 1.5%;
   margin-top: 3%;
 }
-.col_2 span {
-  font-size: .9em;
+.col_2 p {
+  font-size: .8em;
   line-height: 1.4em;
+}
+.p_kiri,.p_kanan{
+  opacity: 0;
+  transform: translate(-50px,0) rotate(15deg);
+  transition: 1s;
+}
+.p_kanan{
+  transform: translate(50px,0) rotate(-15deg);;
+}
+.p_muncul{
+  opacity: 1;
+  transform: translate(0,0);
+}
+/*--end--*/
+
+/*--Skill Bar--*/
+.skillbar {
+  background-color: #f5f5f5;
+  padding: 30px 0;
+}
+.bar {
+  position: relative;
+  background-color: #ddd;
+  width:100%;
+  height:13px;
+  transition: .5s;
+  margin-bottom: 40px;
+}
+.bar span {
+  position: absolute;
+  top: -20px;
+}
+.slide-bar {
+  position: absolute;
+  height: 13px;
+  width: 0;
+  top: 0;
+  background:#00bfc1;
+}
+.percent {
+  position: relative;
+  width: 0;
+  height: 30px;
+  margin-bottom: 2px;
+  overflow: hidden;
+}
+.slide-percent {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/skill/skill-bar-5.png);
+  z-index: 1;
+}
+.slide-percent span {
+  display: block;
+  font-size: .6em;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: center;
+  color: #eaeaea;
+}
+.skillbar,.bar,.slide-bar,
+.percent,.slide-percent,.bar span,
+.slide-percent span {
+  max-width: none !important;
 }
 /*--end--*/
 
 /*--Portfolio--*/
 .portfolio{
-  background-color: #f5f5f5;
   padding: 30px 0 50px 0;
 }
 .portfolio .container {
@@ -238,6 +304,7 @@ section{
 
 /*--Contact--*/
 .contact {
+  background-color: #f5f5f5;
   padding: 30px 0;
 }
 .contact .col_2 {
@@ -359,16 +426,20 @@ input[type="submit"]:hover{
   }
   .nav_menu{
     height: 0;
+    opacity: 0;
     overflow: hidden;
     -webkit-transform: translate(0,-300px);
             transform: translate(0,-300px);
-    -webkit-transition: .8s;
-    transition: .8s;
+    -webkit-transition: .6s;
+    transition: .6s;
   }
   .menu_open {
-    height: 100% !important;
+    opacity: 1;
+    height: 100%;
     -webkit-transform: translate(0,0);
             transform: translate(0,0);
   }
 
+
 }
+
