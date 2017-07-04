@@ -190,7 +190,7 @@ section{
   right: 0;
   width: 30px;
   height: 30px;
-  background-image: url(../img/skill/skill-bar-5.png);
+  background-image: url(../img/flat/skill-bar.png);
   z-index: 1;
 }
 .slide-percent span {
@@ -442,4 +442,3 @@ input[type="submit"]:hover{
 
 
 }
-
